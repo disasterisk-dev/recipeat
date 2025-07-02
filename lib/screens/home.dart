@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:recipeat/components/home_tile.dart';
 import 'package:recipeat/components/corner_button.dart';
 import 'package:recipeat/components/new_recipe_modal.dart';
-import 'package:recipeat/components/text_widgets.dart';
 import 'package:recipeat/screens/all_recipes.dart';
 import 'package:recipeat/screens/lists.dart';
 import 'package:recipeat/screens/meal_plan.dart';

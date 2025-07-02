@@ -19,10 +19,10 @@ ThemeData primaryTheme = ThemeData(
   // seed
   colorScheme: ColorScheme.fromSeed(seedColor: AppColors.brand),
   // scaffold
-  scaffoldBackgroundColor: AppColors.inverseMuted,
+  scaffoldBackgroundColor: AppColors.inverse,
   appBarTheme: AppBarTheme(
-    backgroundColor: AppColors.brand,
-    foregroundColor: AppColors.inverse,
+    backgroundColor: AppColors.inverseMuted,
+    foregroundColor: AppColors.brand,
     surfaceTintColor: Colors.transparent,
     centerTitle: true,
   ),

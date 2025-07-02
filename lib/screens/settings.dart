@@ -7,7 +7,11 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: TitleText("Recipeat")),
+      appBar: AppBar(
+        title: const Icon(Icons.restaurant_rounded),
+        centerTitle: false,
+        actions: [],
+      ),
       body: Center(child: HeadingText("Settings")),
     );
   }
