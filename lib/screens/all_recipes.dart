@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipeat/components/main_appbar.dart';
 import 'package:recipeat/components/text_widgets.dart';
 
 class AllRecipes extends StatelessWidget {
@@ -7,11 +8,7 @@ class AllRecipes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Icon(Icons.restaurant_rounded),
-        centerTitle: false,
-        actions: [],
-      ),
+      appBar: MainAppbar("All Recipes", Icons.home_rounded),
       body: Center(child: HeadingText("All Recipes")),
     );
   }

@@ -54,7 +54,7 @@ class HeadingText extends StatelessWidget {
       text,
       style: GoogleFonts.rubik(
         textStyle: TextStyle(
-          color: AppColors.brand,
+          color: AppColors.bold,
           fontWeight: FontWeight.w800,
           fontSize: 18,
           letterSpacing: 1,
@@ -103,8 +103,8 @@ class TitleText extends StatelessWidget {
       text,
       style: GoogleFonts.rubik(
         textStyle: TextStyle(
-          color: AppColors.inverse,
-          fontWeight: FontWeight.w900,
+          color: AppColors.brand,
+          fontWeight: FontWeight.w800,
           fontSize: 24,
           letterSpacing: 2,
         ),
@@ -166,7 +166,7 @@ class ErrorText extends StatelessWidget {
       text,
       style: GoogleFonts.openSans(
         textStyle: TextStyle(
-          color: AppColors.warning,
+          color: AppColors.error,
           fontSize: 16,
           letterSpacing: 0.5,
         ),

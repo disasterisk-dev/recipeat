@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipeat/components/home_tile.dart';
 import 'package:recipeat/components/corner_button.dart';
+import 'package:recipeat/components/main_appbar.dart';
 import 'package:recipeat/components/new_recipe_modal.dart';
 import 'package:recipeat/screens/all_recipes.dart';
 import 'package:recipeat/screens/lists.dart';
@@ -15,11 +16,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Icon(Icons.restaurant_rounded),
-        centerTitle: false,
-        actions: [],
-      ),
+      appBar: MainAppbar("Recipeat", Icons.restaurant_rounded),
       body: Stack(
         children: [
           Center(
