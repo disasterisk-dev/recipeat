@@ -19,46 +19,43 @@ class RecipeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.all(Radius.circular(4)),
-        color: AppColors.inverse,
-      ),
-      margin: const EdgeInsets.only(bottom: 8),
-      child: IntrinsicHeight(
-        child: Row(
+    return InkWell(
+      onTap: () => print(title),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(8)),
+          color: AppColors.brand.withValues(alpha: 0.25),
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(
-              width: 100,
-              child: AspectRatio(
-                aspectRatio: 10 / 16,
-                child: Image.asset("assets/img/pizza.jpg", fit: BoxFit.cover),
-              ),
+            AspectRatio(
+              aspectRatio: 1 / 1,
+              child: Image.asset("assets/img/pizza.jpg", fit: BoxFit.cover),
             ),
             Expanded(
               child: Container(
-                padding: const EdgeInsets.all(8),
+                padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     HeadingText(title),
-                    SubheadingText(description),
                     const Expanded(child: SizedBox()),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        StyledButton(
-                          onPressed: makeRecipe,
-                          child: const Text("Make"),
+                        Icon(
+                          Icons.hourglass_bottom_rounded,
+                          color: AppColors.boldMuted,
                         ),
-                        IconButton(
-                          style: IconButton.styleFrom(
-                            foregroundColor: AppColors.warning,
-                          ),
-                          onPressed: deleteRecipe,
-                          icon: const Icon(Icons.delete),
+                        SubheadingText("25m"),
+                        Expanded(child: SizedBox()),
+                        Icon(
+                          Icons.soup_kitchen_rounded,
+                          color: AppColors.boldMuted,
                         ),
+                        SubheadingText("4"),
                       ],
                     ),
                   ],

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static Color brand = const Color.fromRGBO(62, 101, 80, 1);
-  static Color brandMuted = const Color.fromRGBO(78, 126, 100, 1);
+  static Color brand = const Color.fromRGBO(105, 158, 107, 1);
 
   static Color info = const Color.fromRGBO(111, 137, 226, 1);
   static Color error = const Color.fromRGBO(229, 96, 96, 1);
@@ -28,7 +27,7 @@ ThemeData primaryTheme = ThemeData(
   ),
   floatingActionButtonTheme: FloatingActionButtonThemeData(
     foregroundColor: AppColors.inverse,
-    backgroundColor: AppColors.brandMuted,
+    backgroundColor: AppColors.brand,
     shape: const CircleBorder(),
   ),
 );

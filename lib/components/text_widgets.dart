@@ -55,7 +55,7 @@ class HeadingText extends StatelessWidget {
       style: GoogleFonts.rubik(
         textStyle: TextStyle(
           color: AppColors.bold,
-          fontWeight: FontWeight.w800,
+          fontWeight: FontWeight.w700,
           fontSize: 18,
           letterSpacing: 1,
         ),
@@ -76,7 +76,7 @@ class InverseHeadingText extends StatelessWidget {
       style: GoogleFonts.rubik(
         textStyle: TextStyle(
           color: AppColors.inverse,
-          fontWeight: FontWeight.w800,
+          fontWeight: FontWeight.w700,
           fontSize: 18,
           letterSpacing: 1,
           shadows: [

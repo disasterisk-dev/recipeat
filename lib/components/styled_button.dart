@@ -11,7 +11,7 @@ class StyledButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FilledButton(
       style: FilledButton.styleFrom(
-        backgroundColor: AppColors.brandMuted,
+        backgroundColor: AppColors.brand,
         foregroundColor: AppColors.inverse,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
