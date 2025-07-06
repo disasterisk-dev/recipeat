@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:recipeat/components/text_widgets.dart';
 import 'package:recipeat/models/app_user.dart';
 import 'package:recipeat/providers/auth_provider.dart';
-import 'package:recipeat/screens/profile.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:recipeat/screens/home.dart';
