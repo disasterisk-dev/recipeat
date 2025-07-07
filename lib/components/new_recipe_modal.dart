@@ -1,10 +1,8 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:recipeat/components/styled_button.dart';
 import 'package:recipeat/components/text_input.dart';
 import 'package:recipeat/components/text_widgets.dart';
-import 'package:http/http.dart' as http;
 import 'package:recipeat/services/functions_service.dart';
 
 class NewRecipeModal extends StatefulWidget {
@@ -70,13 +68,9 @@ class _NewRecipeModalState extends State<NewRecipeModal> {
                             final url = _urlController.text.trim();
 
                             // TODO: Replace external API with Firebase Cloud Function
-                            var response = await http.get(
-                              Uri.parse(
-                                "http://192.168.0.37:3000/api?url=" + url,
-                              ),
-                            );
+                            final response = await FunctionsService.fetchRecipe(url);
 
-                            print(jsonDecode(response.body));
+                            if(response != null) print(response["message"]);
 
                             // setState(() {
                             //   errorFeedback = userRes.error;

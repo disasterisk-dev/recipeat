@@ -10,6 +10,7 @@
 import {setGlobalOptions} from "firebase-functions";
 import {onRequest} from "firebase-functions/https";
 import * as logger from "firebase-functions/logger";
+import {fetchFromJSON} from "./scrapers";
 
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
@@ -33,6 +34,24 @@ export const helloWorld = onRequest((request, response) => {
     data: {
       message: "Hello from Firebase!",
     },
+  };
+
+  response.send(payload);
+});
+
+export const scrapeRecipe = onRequest(async (request, response) => {
+  logger.info("Scraping" + request.body["url"], {structuredData: true});
+
+  let data = null;
+
+  try {
+    data = await fetchFromJSON(request.body["url"]);
+  } catch (e) {
+    logger.info("Scraping Failed", {structuredData: true});
+  }
+
+  const payload = {
+    data: data,
   };
 
   response.send(payload);
