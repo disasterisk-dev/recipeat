@@ -84,7 +84,7 @@ class _SignInFormState extends State<SignInForm> {
                   });
                 }
               },
-              child: ButtonText("Sign In"),
+              label: "Sign In",
             ),
           ],
         ),

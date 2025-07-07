@@ -21,12 +21,9 @@ class RecipeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => print(title),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
-          color: AppColors.brand.withValues(alpha: 0.25),
-        ),
+      child: Card(
         clipBehavior: Clip.antiAlias,
+        surfaceTintColor: AppColors.brand,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

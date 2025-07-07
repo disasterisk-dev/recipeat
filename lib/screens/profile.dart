@@ -40,7 +40,7 @@ class Profile extends StatelessWidget {
                 AuthService.signOut();
                 Navigator.pop(context);
               },
-              child: ButtonText("Sign Out"),
+              label: "Sign Out",
             ),
           ],
         ),

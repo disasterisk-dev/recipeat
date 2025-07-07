@@ -110,7 +110,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   // error feedback
                 }
               },
-              child: ButtonText("Sign Up"),
+              label: "Sign Up",
             ),
           ],
         ),
