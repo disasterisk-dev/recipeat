@@ -5,6 +5,7 @@ import 'package:recipeat/components/styled_button.dart';
 import 'package:recipeat/components/text_input.dart';
 import 'package:recipeat/components/text_widgets.dart';
 import 'package:http/http.dart' as http;
+import 'package:recipeat/services/functions_service.dart';
 
 class NewRecipeModal extends StatefulWidget {
   const NewRecipeModal({super.key});
@@ -30,7 +31,7 @@ class _NewRecipeModalState extends State<NewRecipeModal> {
             children: [
               Center(child: HeadingText("New Recipe")),
               StyledButton(
-                onPressed: () => print("Written"),
+                onPressed: () => FunctionsService.helloWorld(),
                 label: "Write Recipe",
                 icon: Icons.edit_rounded,
               ),
